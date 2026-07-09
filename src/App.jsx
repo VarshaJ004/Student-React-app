@@ -7,6 +7,7 @@ import AddStudent from './components/AddStudent'
 import SearchStudent from './components/SearchStudent'
 import DeleteStudent from './components/DeleteStudent'
 import ViewStudent from './components/ViewStudent'
+import Navigationbar from './components/Navigationbar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
       <SearchStudent />
       <DeleteStudent />
       <ViewStudent />
+      <Navigationbar />
     </>
   )
 }
