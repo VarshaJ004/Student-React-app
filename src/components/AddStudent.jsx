@@ -1,5 +1,6 @@
 import React from 'react'
 import Navigationbar from './Navigationbar'
+import './Student.css'
 
 
 const AddStudent = () => {
