@@ -1,9 +1,11 @@
 import React from 'react'
+import Navigationbar from './Navigationbar'
 
 
 const ViewStudent = () => {
   return (
     <div>
+        <Navigationbar />
        
         <div className="container">
             <h1 className="page-heading mt-4"><center>STUDENT DIRECTORY</center></h1>

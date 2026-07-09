@@ -1,11 +1,12 @@
 import React from 'react'
+import Navigationbar from './Navigationbar'
 
 
 
 const SearchStudent = () => {
   return (
     <div>
-     
+     <Navigationbar />
     <div className="container mt-5">
     <div className='page-box '>
       

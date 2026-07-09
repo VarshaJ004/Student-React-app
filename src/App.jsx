@@ -8,17 +8,21 @@ import SearchStudent from './components/SearchStudent'
 import DeleteStudent from './components/DeleteStudent'
 import ViewStudent from './components/ViewStudent'
 import Navigationbar from './components/Navigationbar'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <AddStudent />
-      <SearchStudent />
-      <DeleteStudent />
-      <ViewStudent />
-      <Navigationbar />
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<AddStudent/>} />
+        <Route path='/search' element={<SearchStudent/>} />
+        <Route path='/delete' element={<DeleteStudent/>} />
+        <Route path='/view' element={<ViewStudent/>} />
+      </Routes>
+      </BrowserRouter>
     </>
   )
 }

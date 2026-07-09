@@ -1,11 +1,12 @@
 import React from 'react'
+import Navigationbar from './Navigationbar'
 
 
 
 const DeleteStudent = () => {
   return (
     <div>
-       
+       <Navigationbar />
       <div className='container'>
     <div className='page-box'> 
       <h1 className='page-heading'><center>Delete Book</center></h1>

@@ -8,7 +8,7 @@ const Navigationbar = () => {
         style={{ backgroundColor: "#271801" }}
       >
         <div className="container-fluid">
-          <a className="navbar-brand text-white" href="#">Libarary Hub</a>
+          <a className="navbar-brand text-white" href="#">Student Portal</a>
 
           <button
             className="navbar-toggler"
@@ -24,10 +24,10 @@ const Navigationbar = () => {
 
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="nav-link text-white active" href="/">Add Book</a>
-              <a className="nav-link text-white" href="/Search">Search Book</a>
-              <a className="nav-link text-white" href="/Delete">Delete Book</a>
-              <a className="nav-link text-white" href="/View">View Book</a>
+              <a className="nav-link text-white active" href="/">Add Student</a>
+              <a className="nav-link text-white" href="/search">Search Student</a>
+              <a className="nav-link text-white" href="/delete">Delete Student</a>
+              <a className="nav-link text-white" href="/view">View Student</a>
               
             </div>
           </div>

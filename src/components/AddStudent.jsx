@@ -1,10 +1,11 @@
 import React from 'react'
+import Navigationbar from './Navigationbar'
 
 
 const AddStudent = () => {
   return (
     <div>
-
+        <Navigationbar />
 
       <div className="container mt-5">
 
