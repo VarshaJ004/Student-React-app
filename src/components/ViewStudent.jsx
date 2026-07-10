@@ -1,156 +1,112 @@
-import React from 'react'
-import Navigationbar from './Navigationbar'
-import './Student.css'
-
+import React, { useState } from "react";
+import Navigationbar from "./Navigationbar";
+import "./Student.css";
 
 const ViewStudent = () => {
-  return (
-    <div>
-        <Navigationbar />
-       
-        <div className="container">
-            <h1 className="page-heading mt-4"><center>STUDENT DIRECTORY</center></h1>
-            <div className="row">
-                <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                    <div className="row g-3">
-                       
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Aarav Sharma</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-001</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 10-A</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
+    const [data, changeData] = useState([
+        {
+            name: "Aarav Sharma",
+            avatar: "https://api.dicebear.com/7.x/adventurer/svg?seed=Aarav",
+            course: "Grade 10-A",
+            admn: "ADM-2026-001",
+            phone: 9876543210
+        },
+        {
+            name: "Zara Patel",
+            avatar: "https://api.dicebear.com/7.x/adventurer/svg?seed=Zara",
+            course: "Grade 12-B",
+            admn: "ADM-2026-002",
+            phone: 9876543211
+        },
+        {
+            name: "Vivaan Iyer",
+            avatar: "https://api.dicebear.com/7.x/adventurer/svg?seed=Vivaan",
+            course: "Grade 9-C",
+            admn: "ADM-2026-003",
+            phone: 9876543212
+        },
+        {
+            name: "Ananya Reddy",
+            avatar: "https://api.dicebear.com/7.x/adventurer/svg?seed=Ananya",
+            course: "Grade 11-A",
+            admn: "ADM-2026-004",
+            phone: 9876543213
+        },
+        {
+            name: "Kabir Singh",
+            avatar: "https://api.dicebear.com/7.x/adventurer/svg?seed=Kabir",
+            course: "Grade 10-B",
+            admn: "ADM-2026-005",
+            phone: 9876543214
+        }
+    ]);
+
+
+    return (
+        <div>
+            <Navigationbar />
+
+            <div className="container">
+                <h1 className="page-heading mt-4 text-center">
+                    STUDENT DIRECTORY
+                </h1>
+
+                <div className="row mt-4">
+
+                    {
+                        data.map((value, index) => {
+
+                            return (
+                                <div 
+                                className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center"
+                                key={index}
+                            >
+                                <div className="card shadow id-card">
+                            
+                                    <div className="card-body text-center p-3">
+                            
+                                        <img
+                                            src={value.avatar}
+                                            className="rounded-circle profile-img"
+                                            alt={value.name}
+                                        />
+                            
+                                        <h6 className="card-title mt-3 mb-2">
+                                            {value.name}
+                                        </h6>
+                            
+                                        <p className="card-text mb-1 small">
+                                            Admission No: {value.admn}
+                                        </p>
+                            
+                                        <p className="card-text mb-1 small">
+                                            <strong>{value.course}</strong>
+                                        </p>
+                            
+                                        <p className="card-text small">
+                                            Phone: {value.phone}
+                                        </p>
+                            
+                                        <button className="btn btn-primary btn-sm w-100">
+                                            View Details
+                                        </button>
+                            
+                                    </div>
+                            
                                 </div>
                             </div>
-                        </div>
+                            )
 
-                       
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Zara Patel</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-002</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 12-B</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                       
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Vivaan Iyer</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-003</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 9-C</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                       
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Ananya Reddy</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-004</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 11-A</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Kabir Singh</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-005</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 10-B</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                      
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Diya Malhotra</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-006</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 12-A</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                       
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Rohan Das</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-007</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 8-C</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Meera Joshi</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-008</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 11-C</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Arjun Nair</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-009</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 10-C</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-                            <div className="card">
-                                <div className="card-body">
-                                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80" className="card-img-top img-fluid rounded" alt="Profile" height="300" />
-                                    <h5 className="card-title mt-2">Isha Gupta</h5>
-                                    <p className="card-text mb-1">Admission No: ADM-2026-010</p>
-                                    <p className="card-text"><strong>Class/Grade: Grade 9-A</strong></p>
-                                    <button className="btn btn-primary w-100">View Details</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                        })
+                    }
 
                 </div>
-            </div>
-        </div>
-    </div>
-  )
-}
 
-export default ViewStudent
+            </div>
+
+        </div>
+    );
+};
+
+export default ViewStudent;
